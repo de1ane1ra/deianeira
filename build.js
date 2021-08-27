@@ -2,7 +2,7 @@
 
 const fs = require("fs");
 
-const build_for = "public";
+const build_for = "low_power";
 
 const envs = {
     public: {
@@ -41,6 +41,7 @@ const t__pg__showcase = function(img_path) {
             <head>
                 <meta charset="utf-8" />
                 <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, shrink-to-fit=no" />
+                <meta name="description" content="33rpm is a collection of concept album cover artwork in 1:1 square format by developer and designer deianeira. The 33rpm collection focuses primarily on concentric and kaleidoscopic digital designs created between 2018 and 2021."/>
                 <title>33rpm | deianeira</title>
                 
                 <link rel="stylesheet" type="text/css" href="${build_for === "low_power" ? "../" : "./"}src/styles/index.css" />
@@ -64,10 +65,10 @@ const t__pg__showcase = function(img_path) {
                     <span><a href="mailto:d@deianeira.co">d@deianeira.co</a></span>
                 </header>
 
-                <section>${art_names.map(art_name => `<figure><a href="${build_for === "low_power" ? "../" : "./"}${img_path}/${details_path}/${art_name}" rel="noopener noreferrer" target="_blank"><img src="${build_for === "low_power" ? "../" : "./"}${img_path}/${gallery_path}/${art_name}" loading="lazy" /></a></figure>`).join('')}</section>
+                <section>${art_names.map(art_name => `<figure><a href="${build_for === "low_power" ? "../" : "./"}${img_path}/${details_path}/${art_name}" rel="noopener noreferrer" target="_blank"><img src="${build_for === "low_power" ? "../" : "./"}${img_path}/${gallery_path}/${art_name}" loading="lazy" alt="album cover concept artwork by deianeira: ${art_name}" /></a></figure>`).join('')}</section>
             
                 <aside>
-                    <span><a href="mailto:d@deianeira.co">Is your music in need of a companion?</a></span>
+                    <span><a href="mailto:d@deianeira.co">interested in work and collaboration</a></span>
                 </aside>
 
                 <footer>
